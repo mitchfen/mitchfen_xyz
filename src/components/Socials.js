@@ -1,4 +1,4 @@
-import { SiGithub, SiLinkedin, SiMailDotRu, SiOrcid } from "react-icons/si";
+import { SiGithub, SiLinkedin, SiMailDotRu, SiOrcid, SiInstagram } from "react-icons/si";
 
 const Socials = () => {
   return (
@@ -25,8 +25,14 @@ const Socials = () => {
         </a>
         <br />
         <br />
-        <SiMailDotRu size={25} />{" "}
-        <a href="mailto:mitchfen@mitchfen.xyz">mitchfen@mitchfen.xyz</a>
+        <SiInstagram size={25} />{" "}
+        <a
+          href="https://instagram.com/mitch.fenner"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          mitch.fenner
+        </a>
         <br />
         <br />
         <SiOrcid size={25} />{" "}
@@ -37,6 +43,10 @@ const Socials = () => {
         >
           0000-0002-9684-0447
         </a>
+        <br />
+        <br />
+        <SiMailDotRu size={25} />{" "}
+        <a href="mailto:mitchfen@mitchfen.xyz">mitchfen@mitchfen.xyz</a>
       </fieldset>
     </>
   );

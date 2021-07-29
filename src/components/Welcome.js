@@ -15,10 +15,7 @@ const Welcome = () => {
         <code className="magenta">PROCEDURE DIVISION.</code>
         <br />
         <code className="magenta">DISPLAY </code>
-        <code>"Welcome to my site"</code>
-        <br />
-        <code className="magenta">DISPLAY </code>
-        <code>"Checkout some of my projects!"</code>
+        <code>"Welcome to my site ^.^"</code>
         <br />
         <code className="magenta">STOP RUN.</code>
       </fieldset>
