@@ -11,10 +11,8 @@ Azure: [mitchfen-xyz-container.azurewebsites.net](https://mitchfen-xyz-container
 
 ## How I automate it
 
-- Publishing the site 🚀
-  - When code is pushed to the main branch, the [publish workflow](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publish.yaml) clones my repo, creates a production build, and publishes to gh-pages.
-- Publishing the container 🐳
-  - Upon success of the publish workflow, a [second workflow](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/docker-push.yml) builds and pushes my Docker image to the GitHub container registry.
+- When code is pushed to the main branch, the [publish workflow](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publishSite.yaml) creates a production build, and publishes to gh-pages.
+- Upon success of the publish workflow, a [second workflow](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publishContainer.yaml) builds and pushes my Docker image to the GitHub container registry.
 
 ## How to serve the site locally
 
