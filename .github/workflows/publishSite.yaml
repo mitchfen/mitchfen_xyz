@@ -14,8 +14,8 @@ env:
 jobs:
   publishSite:
     environment:
-      name: mitchfen.xyz
-      url: https://mitchfen.xyz
+      name: mitchfen-xyz-container
+      url: https://mitchfen-xyz-container.azurewebsites.net/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
