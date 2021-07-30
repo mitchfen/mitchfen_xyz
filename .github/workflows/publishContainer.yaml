@@ -10,6 +10,9 @@ on:
 
 jobs:
   publishContainer:
+    environment:
+      name: mitchfen-xyz-container
+      url: https://mitchfen-xyz-container.azurewebsites.net/
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
