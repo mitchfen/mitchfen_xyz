@@ -7,8 +7,8 @@
 I'm more interested in DevOps than front-end development, so I'm using this site as an opportunity to play with CI/CD pipelines, Docker, and cloud hosting platforms.
 
 ## Links
-GitHub pages: [mitchfen.xyz](https://mitchfen.xyz)  
-Azure: [mitchfen-xyz-container.azurewebsites.net](https://mitchfen-xyz-container.azurewebsites.net)
+Azure Static Site: [mitchfen.xyz](https://mitchfen.xyz)  
+Azure App Service: [mitchfen-xyz-container.azurewebsites.net](https://mitchfen-xyz-container.azurewebsites.net)
 
 ## How I automate it
 
