@@ -1,7 +1,8 @@
 # Mitch Fenner's Personal Website
 
+[![Deploy to Azure](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/deployToAzure.yaml/badge.svg)](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/deployToAzure.yaml)
 [![Publish container](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publishContainer.yaml/badge.svg)](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publishContainer.yaml)
-[![Publish site](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publishSite.yaml/badge.svg)](https://github.com/mitchfen/mitchfen.github.io/actions/workflows/publishSite.yaml)
+
 
 I'm more interested in DevOps than front-end development, so I'm using this site as an opportunity to play with CI/CD pipelines, Docker, and cloud hosting platforms.
 
