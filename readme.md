@@ -19,12 +19,12 @@ Azure App Service: [mitchfen-xyz-container.azurewebsites.net](https://mitchfen-x
 
 ```bash
 # Using Docker
-sudo docker run --rm -p 80:80 ghcr.io/mitchfen/mitchfen.github.io:latest
+sudo docker run --rm -p 80:80 ghcr.io/mitchfen/personal_website:latest
 ```
 
 ```bash
 # Using npm
-git clone https://github.com/mitchfen/mitchfen.github.io.git
+git clone https://github.com/mitchfen/personal_website.git
 cd mitchfen.github.io
 npm ci
 npm start
