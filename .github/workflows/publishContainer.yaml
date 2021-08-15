@@ -22,7 +22,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - uses: docker/login-action@master
+      - name: Az login
+        uses: azure/login@v1
+        with:
+          creds: ${{secrets.AZURE_CREDENTIALS}}
+          enable-AzPSSession: true
+
+      - name: Redeploy Azure resources
+        uses: azure/powershell@v1
+        with:
+          inlineScript: |
+            $templateFile = $( Join-path $pwd.path infrastructure\containerAppServiceTemplate.json)
+            $resourceGroupName = "mitchfen_personal_site_container"
+            New-AzResourceGroupDeployment `
+              -Name DeployTemplate `
+              -ResourceGroupName $resourceGroupName `
+              -TemplateFile $templateFile `
+              -sites_mitchfen_xyz_container_name "mitchfen-xyz-container" `
+              -serverfarms_mitchfenpersonalsite_appservice_plan_name "mitchfenpersonalsite-appservice-plan" `
+              -customDomainVerificationId $CUSTOM_DOMAIN_VERIFICATION_ID `
+              -verbose
+          azPSVersion: 'latest'
+
+      - name: Docker login
+        uses: docker/login-action@master
         with:
           registry: ghcr.io
           username: ${{ github.repository_owner }}
@@ -32,5 +55,4 @@ jobs:
         uses: docker/build-push-action@master
         with:
           push: true
-          tags: |
-            ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/${{ github.repository }}:latest
