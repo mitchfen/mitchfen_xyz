@@ -34,7 +34,7 @@ jobs:
     needs: build
     environment:
       name: 'mitchfen.xyz'
-      url: ${{ steps.deploy.outputs.webapp-url }}
+      url: https://mitchfen.xyz
 
     steps:
     - name: Download artifact from build job
