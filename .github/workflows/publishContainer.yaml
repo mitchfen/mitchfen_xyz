@@ -18,6 +18,8 @@ jobs:
       name: mitchfen-xyz-container
       url: https://mitchfen-xyz-container.azurewebsites.net/
     runs-on: ubuntu-latest
+    env:
+      CUSTOM_DOMAIN_VERIFICATION_ID: ${{ secrets.CUSTOM_DOMAIN_VERIFICATION_ID }}
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -40,7 +42,7 @@ jobs:
               -TemplateFile $templateFile `
               -sites_mitchfen_xyz_container_name "mitchfen-xyz-container" `
               -serverfarms_mitchfenpersonalsite_appservice_plan_name "mitchfenpersonalsite-appservice-plan" `
-              -customDomainVerificationId $CUSTOM_DOMAIN_VERIFICATION_ID `
+              -customDomainVerificationId $env:CUSTOM_DOMAIN_VERIFICATION_ID `
               -verbose
           azPSVersion: 'latest'
 
