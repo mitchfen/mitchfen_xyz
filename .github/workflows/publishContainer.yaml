@@ -30,22 +30,6 @@ jobs:
           creds: ${{secrets.AZURE_CREDENTIALS}}
           enable-AzPSSession: true
 
-      - name: Redeploy Azure resources
-        uses: azure/powershell@v1
-        with:
-          inlineScript: |
-            $templateFile = $( Join-path $pwd.path infrastructure\containerAppServiceTemplate.json)
-            $resourceGroupName = "mitchfen_personal_site_container"
-            New-AzResourceGroupDeployment `
-              -Name DeployTemplate `
-              -ResourceGroupName $resourceGroupName `
-              -TemplateFile $templateFile `
-              -sites_mitchfen_xyz_container_name "mitchfen-xyz-container" `
-              -serverfarms_mitchfenpersonalsite_appservice_plan_name "mitchfenpersonalsite-appservice-plan" `
-              -customDomainVerificationId $env:CUSTOM_DOMAIN_VERIFICATION_ID `
-              -verbose
-          azPSVersion: 'latest'
-
       - name: Docker login
         uses: docker/login-action@master
         with:
