@@ -1,7 +1,7 @@
 import Welcome from "./components/Welcome";
 //import AnimatedSocials from "./components/AnimatedSocials";
 import Socials from "./components/Socials";
-import RecentProjects from "./components/RecentProjects";
+import Projects from "./components/Projects";
 import Files from "./components/Files";
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <br />
         </div>
         <div className="right-column">
-          <RecentProjects />
+          <Projects />
           <br />
           <Files />
           <br />

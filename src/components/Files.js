@@ -9,7 +9,7 @@ const Files = () => {
             target="_blank"
             rel="noreferrer noopener"
           >
-            publickey.asc
+            mitchfen.asc
           </a>
         </p>
       </fieldset>

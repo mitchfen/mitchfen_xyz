@@ -1,8 +1,8 @@
 :root {
-  --background: rgb(24, 25, 27);
-  --foreground: rgba(248, 248, 242, 0.808);
-  --magenta: rgb(232, 62, 140);
-  --orange: rgb(248, 159, 42);
+  --background: #0a0b0d;
+  --foreground: #979c9c;
+  --magenta: #a63245;
+  --orange: #348899;
 }
 
 .magenta {
