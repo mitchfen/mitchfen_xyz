@@ -1,6 +1,4 @@
-import Welcome from "./components/Welcome";
-//import AnimatedSocials from "./components/AnimatedSocials";
-import Socials from "./components/Socials";
+import AnimatedSocials from "./components/AnimatedSocials";
 import Projects from "./components/Projects";
 import Files from "./components/Files";
 
@@ -9,16 +7,13 @@ function App() {
     <>
       <div className="flex-parent">
         <div className="left-column">
-          <Welcome />
+          <h2>Mitchell Fenner</h2>
+          <hr />
+          <AnimatedSocials />
           <br />
-          <Socials />
-          <br />
-        </div>
-        <div className="right-column">
           <Projects />
           <br />
           <Files />
-          <br />
         </div>
       </div>
     </>

@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
 :root {
-  --background: #0a0b0d;
-  --foreground: #979c9c;
-  --magenta: #a63245;
-  --orange: #348899;
+  --background: #293241;
+  --foreground: #cccccc;
+  --magenta: #f8714fd3;
+  --orange: #f8714fd3;
 }
 
 .magenta {
@@ -20,8 +22,8 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-size: 20pt;
-  font-family: monospace, sans-serif;
+  font-size: 18pt;
+  font-family: "Share Tech Mono", monospace;
   padding: 0.5em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -33,7 +35,7 @@ p {
 }
 
 code {
-  font-family: monospace;
+  font-family: "Share Tech Mono", monospace;
   padding: 2px;
   font-size: 90%;
 }
@@ -67,14 +69,6 @@ a:hover {
   justify-content: center;
 }
 
-.right-column {
-  max-width: 50%;
-}
-
-.left-column {
-  padding-right: 3em;
-}
-
 .social {
   margin: 5px 10px 5px 10px;
   will-change: transform;
@@ -99,29 +93,13 @@ a:hover {
     padding-right: 2em;
   }
   body {
-    font-size: 15pt;
+    font-size: 20pt;
   }
 }
 
 @media (max-width: 950px) {
-  .flex-parent {
-    flex-direction: column;
-  }
-  .left-column {
-    padding-right: 0em;
-  }
-  .right-column {
-    max-width: 100%;
-  }
-  .social {
-    color: var(--magenta);
-  }
-  .social:hover {
-    color: var(--magenta);
-    transition: none;
-    transform: none;
-  }
   body {
+    padding: 0em;
     font-size: 15pt;
   }
 }
